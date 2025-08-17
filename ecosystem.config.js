@@ -1,7 +1,7 @@
 module.exports = {
   apps: [
     {
-      name: 'task-manager-backend',
+      name: 'parking-management-backend',
       script: './backend/server.js',
       instances: 1,
       autorestart: true,
@@ -19,7 +19,7 @@ module.exports = {
       time: true
     },
     {
-      name: 'task-manager-frontend',
+      name: 'parking-management-frontend',
       script: 'serve',
       args: '-s frontend/build -l 3000',
       instances: 1,
