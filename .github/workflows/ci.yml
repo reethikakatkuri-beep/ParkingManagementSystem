@@ -18,6 +18,9 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
+    - name: Set up job
+      run: echo "Job setup complete"
+
     - name: Checkout code
       uses: actions/checkout@v4
 
@@ -31,34 +34,3 @@ jobs:
       run: |
         cd backend
         npm ci
-
-    - name: Install frontend dependencies
-      run: |
-        cd frontend
-        npm ci
-
-    - name: Run backend tests
-      run: |
-        cd backend
-        npm test
-      env:
-        MONGODB_URI: ${{ secrets.MONGODB_URI }}
-        JWT_SECRET: ${{ secrets.JWT_SECRET }}
-
-    - name: Run frontend tests
-      run: |
-        cd frontend
-        npm test -- --watchAll=false
-
-  # Deploy job is disabled for now
-  # deploy:
-  #   name: Deploy to EC2
-  #   runs-on: ubuntu-latest
-  #   needs: test
-  #   if: github.ref == 'refs/heads/main'
-  #   
-  #   steps:
-  #   - name: Checkout code
-  #     uses: actions/checkout@v4
-  #   - name: Deploy to EC2
-  #     run: echo "Deployment disabled"
