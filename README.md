@@ -2,6 +2,8 @@
 
 A comprehensive MERN stack application for managing parking operations with real-time monitoring and digital payments.
 
+jera: https://reethikakatkuri-1755354651853.atlassian.net/jira/software/projects/PMS/boards/3?atlOrigin=eyJpIjoiOWExNDNmYWVmZmY0NGI1ZTg3YjBmOTNkNzNlMWNlODUiLCJwIjoiaiJ9
+
 ## Features
 
 - **Real-time Parking Monitoring** - Track parking slot availability
